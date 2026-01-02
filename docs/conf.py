@@ -23,8 +23,8 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'UoC MPhil Data Intensive Science and MPhil Economics and Data Science'
-copyright = '2024, Boris Bolliet'
+project = 'Research Computing and Software Development'
+copyright = '2025, Boris Bolliet'
 author = 'Boris Bolliet'
 
 # The full version, including alpha/beta/rc tags
@@ -41,6 +41,7 @@ extensions = [
 	'sphinx.ext.mathjax',
 	'sphinx_rtd_theme',
     'sphinx_gallery.load_style',  # load CSS for gallery (needs SG >= 0.6)
+    'sphinx.ext.githubpages',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -84,4 +85,11 @@ exclude_patterns = [
     'material/tbd/*',  # Exclude all files in the 'tbd' folder
     'material/lecture1/gitlab.ipynb',
     'venvs/*',
+    'material_bkp/*',  # Exclude ALL material from compilation
 ]
+
+# Add GitHub repository settings
+html_theme_options = {
+    'repository_url': 'https://github.com/borisbolliet/ResearchComputing',
+    'use_repository_button': True,
+}
